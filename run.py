@@ -5,7 +5,6 @@ import torch
 def main():
     model_id = 'openai/gpt-oss-20b'
     tokenizer = AutoTokenizer.from_pretrained(model_id)
-    tokenizer.use_default_system_prompt = False
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         torch_dtype=torch.bfloat16,
